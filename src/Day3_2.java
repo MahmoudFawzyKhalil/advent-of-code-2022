@@ -21,7 +21,7 @@ public class Day3_2 {
             totalPriority += currentGroup.findPriorityOfCommonItem();
         }
 
-        System.out.println(totalPriority);
+        System.out.println("totalPriority = " + totalPriority);
     }
 
     record Rucksack(String contents) {
