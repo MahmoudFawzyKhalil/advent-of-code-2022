@@ -71,6 +71,12 @@ public class Day5_1 {
             return delegateStack.pop();
         }
 
+        public void movePart1(int n, StackOfCrates<? super T> to) {
+            for (int i = 0; i < n; i++) {
+                to.push(this.pop());
+            }
+        }
+
         @SuppressWarnings("unchecked")
         public void move(int n, StackOfCrates<? super T> to) {
             ArrayDeque<Character> reverser = new ArrayDeque<>();
