@@ -77,15 +77,14 @@ public class Day5_1 {
             }
         }
 
-        @SuppressWarnings("unchecked")
         public void move(int n, StackOfCrates<? super T> to) {
-            ArrayDeque<Character> reverser = new ArrayDeque<>();
+            ArrayDeque<T> reverser = new ArrayDeque<>();
             for (int i = 0; i < n; i++) {
-                reverser.push((Character) this.pop());
+                reverser.push(this.pop());
             }
 
             for (int i = 0; i < n; i++) {
-                to.push((T) reverser.pop());
+                to.push(reverser.pop());
             }
         }
     }
